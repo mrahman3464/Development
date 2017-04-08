@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean name="restaurantBean" class="com.mkseries.springcore1.Restaurant">
+	<property name="tea" ref="teaBean"></property>
+    <property name="welcomeNote" value="Good Mornign Customer"></property>
+    <property name="waitersList">
+        <list>
+		         <value>Jhon Cena</value>
+		         <value>Khali</value>
+		         <value>Under Taker</value>
+         
+        </list>
+   </property>
+   <property name="waitersSet">
+      	 <set>
+   				 <value>Junior</value>
+   				 <value>Seniors</value>
+   				 <value>Experienced</value>
+    
+    
+    	</set>  
+    	
+   </property> 
+   
+   <property name="waitersMap">
+      	 <map>
+   				 <entry key="waiter1" value="Sharukh Khan"> </entry>
+   				 <entry key="waiter2" value="Amir Khan"> </entry>
+   				 <entry key="waiter3" value="Salman Khan"> </entry>
+    
+    
+    	</map>  
+    	
+   </property> 
+   
+   
+</bean>
+
+<bean name="teaBean" class="com.mkseries.springcore1.Tea"></bean>
+
+
+
+
+
+
+
+</beans>

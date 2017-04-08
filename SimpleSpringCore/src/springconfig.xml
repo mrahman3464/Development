@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean name="restaurantBean" class="com.mkseris.springcore.Restaurant">
+<property name="tea" ref="teaBean"></property>
+<property name="salad" ref="saladBean"></property>
+<property name="dessert" ref="dessertsBean"></property>
+<property name="maincourse" ref="mainCourseBean"></property>
+
+</bean>
+
+<bean name="teaBean" class="com.mkseris.springcore.Tea"></bean>
+<bean name="dessertsBean" class="com.mkseris.springcore.Desserts"></bean>
+<bean name="saladBean" class="com.mkseris.springcore.Salad"></bean>
+<bean name="mainCourseBean" class="com.mkseris.springcore.MainCourse"></bean>
+
+
+
+
+
+
+</beans>

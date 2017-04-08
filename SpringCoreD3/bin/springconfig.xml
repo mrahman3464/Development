@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- <bean name="restaurantBean" class="com.mkseris.springcoreday3.Restaurant" init-method="init" destroy-method="destroy"> -->
+<!-- <bean name="restaurantBean" class="com.mkseris.springcoreday3.Restaurant"> -->
+<bean name="restaurantBean" class="com.mkseris.springcoreday3.Restaurant" scope="singleton" lazy-init="true">
+<!-- <bean name="restaurantBean" class="com.mkseris.springcoreday3.Restaurant" scope="prototype"> -->
+ 
+	<property name="tea" ref="teaBean"></property>
+    <property name="welcomeNote" value="Good Mornign and Welcome to the Restaurant"></property>
+    <property name="waitersList">
+        <list>
+		         <value>Johnny Depp</value>
+		         <value>Tom Cruse</value>
+		         <value>Vin Diesel</value>
+        </list>
+   </property>
+   <property name="waitersSet">
+      	 <set>
+   				 <value>Intern</value>
+   				 <value>Junior</value>
+   				 <value>Senior</value>
+    	</set>  
+    	
+   </property> 
+   
+   <property name="waitersMap">
+      	 <map>
+   				 <entry key="waiter1" value="Tom Bradey"> </entry>
+   				 <entry key="waiter2" value="Julio Jones"> </entry>
+   				 <entry key="waiter3" value="Matt Ryan"> </entry>
+        </map>  
+    	
+   </property> 
+   
+   
+</bean>
+
+<bean name="teaBean" class="com.mkseris.springcoreday3.Tea"/>
+<bean name="postProcessorBean" class="com.mkseris.springcoreday3.DemoBeanPostProcessor"/>
+<bean name="factoryPostProcessorBean" class="com.mkseris.springcoreday3.DemoBeanFactoryPostProcessor"/>
+
+
+
+
+</beans>
+
+
+
+
+
+
+
+
+
+
